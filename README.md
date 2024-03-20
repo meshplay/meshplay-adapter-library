@@ -1,5 +1,5 @@
-# Meshery Adapter Library
-The Meshery Adapter Library provides a common and consistent set of functionality that Meshery adapters use for managing the lifecycle, configuration, operation, and performance of cloud native infrastructure. See [Introducing MeshKit and the Meshery Adapter Library](https://layer5.io/blog/meshery/introducing-meshkit-and-the-meshplay-adapter-library) for more.
+# Meshplay Adapter Library
+The Meshplay Adapter Library provides a common and consistent set of functionality that Meshplay adapters use for managing the lifecycle, configuration, operation, and performance of cloud native infrastructure. See [Introducing MeshKit and the Meshplay Adapter Library](https://layer5.io/blog/meshplay/introducing-meshkit-and-the-meshplay-adapter-library) for more.
 
 ## Purpose 
 
@@ -48,7 +48,7 @@ Find out more on the <a href="https://layer5.io/community">Layer5 community</a>.
 
 <div>&nbsp;</div>
 
-<a href="https://meshery.io/community"><img alt="Layer5 Service Mesh Community" src=".github/readme/images//slack-128.png" style="margin-left:10px;padding-top:5px;" width="110px" align="right" /></a>
+<a href="https://meshplay.io/community"><img alt="Layer5 Service Mesh Community" src=".github/readme/images//slack-128.png" style="margin-left:10px;padding-top:5px;" width="110px" align="right" /></a>
 
 <a href="http://slack.layer5.io"><img alt="Layer5 Service Mesh Community" src=".github/readme/images//community.svg" style="margin-right:8px;padding-top:5px;" width="140px" align="left" /></a>
 
@@ -59,5 +59,5 @@ Find out more on the <a href="https://layer5.io/community">Layer5 community</a>.
 ✔️ <em><strong>Discuss</strong></em> in the <a href="https://discuss.layer5.io">Community Forum</a>.<br />
 </p>
 <p align="center">
-<i>Not sure where to start?</i> Grab an open issue with the <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Alayer5io+org%3Ameshery+org%3Aservice-mesh-performance+org%3Aservice-mesh-patterns+label%3A%22help+wanted%22+">help-wanted label</a>.
+<i>Not sure where to start?</i> Grab an open issue with the <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Alayer5io+org%3Ameshplay+org%3Aservice-mesh-performance+org%3Aservice-mesh-patterns+label%3A%22help+wanted%22+">help-wanted label</a>.
 </p>

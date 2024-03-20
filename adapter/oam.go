@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	meshmodel "github.com/layer5io/meshkit/models/meshmodel/core/v1alpha1"
-	"github.com/layer5io/meshkit/models/oam/core/v1alpha1"
-	"github.com/layer5io/meshkit/utils"
-	"github.com/layer5io/meshkit/utils/manifests"
+	meshmodel "github.com/khulnasoft/meshkit/models/meshmodel/core/v1alpha1"
+	"github.com/khulnasoft/meshkit/models/oam/core/v1alpha1"
+	"github.com/khulnasoft/meshkit/utils"
+	"github.com/khulnasoft/meshkit/utils/manifests"
 )
 
 var (
@@ -139,7 +139,7 @@ func createMeshModelComponentsFromLegacyOAMComponents(def []byte, schema string,
 	return
 }
 
-// Meshery core components are versioned alongside their corresponding Adapter components,
+// Meshplay core components are versioned alongside their corresponding Adapter components,
 // which, in turn, are versioned with respect to the infrastructure under management; e.g. "Istio Mesh".
 // Every time that managed components are generated for a new infrastructure version (e.g.  service mesh version),
 // the latest core components are to be replicated (copied) and assigned the latest infrastructure version.
@@ -151,7 +151,7 @@ func copyCoreComponentsToNewVersion(fromDir string, toDir string, newVersion str
 	}
 	for _, f := range files {
 		//core definition file or core schema file
-		if !strings.Contains(strings.TrimSuffix(f.Name(), ".json"), ".") || !strings.Contains(strings.TrimSuffix(f.Name(), ".meshery.layer5io.schema.json"), ".") {
+		if !strings.Contains(strings.TrimSuffix(f.Name(), ".json"), ".") || !strings.Contains(strings.TrimSuffix(f.Name(), ".meshplay.layer5io.schema.json"), ".") {
 			fsource, err := os.Open(filepath.Join(fromDir, f.Name()))
 			if err != nil {
 				return err

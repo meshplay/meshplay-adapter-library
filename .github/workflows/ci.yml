@@ -52,7 +52,7 @@ jobs:
       - name: test
         run: make test
       - name: Upload covergae to Codecov
-        if: github.repository == 'meshery/meshplay-adapter-library'
+        if: github.repository == 'khulnasoft/meshplay-adapter-library'
         uses: codecov/codecov-action@v3
         with:
           files: ./coverage.out

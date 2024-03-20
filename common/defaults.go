@@ -18,9 +18,9 @@ package common
 import (
 	"fmt"
 
+	"github.com/khulnasoft/meshkit/utils"
 	configprovider "github.com/khulnasoft/meshplay-adapter-library/config/provider"
 	"github.com/khulnasoft/meshplay-adapter-library/status"
-	"github.com/layer5io/meshkit/utils"
 )
 
 // The values provided here are examples of config objects that can be used as a starting point for adapter specific configuration.
@@ -42,7 +42,7 @@ var (
 	}
 
 	defaultProviderConfig = map[string]string{
-		"filepath": fmt.Sprintf("%s/.meshery", utils.GetHome()),
+		"filepath": fmt.Sprintf("%s/.meshplay", utils.GetHome()),
 		"filename": "sample.yml",
 		"filetype": "yaml",
 	}

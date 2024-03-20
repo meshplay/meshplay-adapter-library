@@ -15,7 +15,7 @@
 package adapter
 
 import (
-	"github.com/layer5io/meshkit/errors"
+	"github.com/khulnasoft/meshkit/errors"
 )
 
 const (
@@ -55,9 +55,9 @@ var (
 		ErrAuthInfosInvalidMsgCode,
 		errors.Alert,
 		[]string{"none of the auth info is valid. Certificate path is invalid or is inaccessible"},
-		[]string{"One or more Kubernetes authentication info is either invalid or the certificate paths are invalid causing Meshery adapter setup failure"},
-		[]string{"kubeconfig passed to Meshery may be referring to a \"context\" whose auth info is a file path", "adapter may have cached a copy of kubeconfig"},
-		[]string{"ensure kubeconfig passed to Meshery is flattened", "if running adapter in Kubernetes, attempt to restart the pod; in development environment try deleting ~/.meshery s"},
+		[]string{"One or more Kubernetes authentication info is either invalid or the certificate paths are invalid causing Meshplay adapter setup failure"},
+		[]string{"kubeconfig passed to Meshplay may be referring to a \"context\" whose auth info is a file path", "adapter may have cached a copy of kubeconfig"},
+		[]string{"ensure kubeconfig passed to Meshplay is flattened", "if running adapter in Kubernetes, attempt to restart the pod; in development environment try deleting ~/.meshplay s"},
 	)
 )
 

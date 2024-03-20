@@ -20,10 +20,10 @@ package adapter
 import (
 	"context"
 
+	meshkitCfg "github.com/khulnasoft/meshkit/config"
+	"github.com/khulnasoft/meshkit/logger"
+	"github.com/khulnasoft/meshkit/utils/events"
 	"github.com/khulnasoft/meshplay-adapter-library/meshes"
-	meshkitCfg "github.com/layer5io/meshkit/config"
-	"github.com/layer5io/meshkit/logger"
-	"github.com/layer5io/meshkit/utils/events"
 )
 
 // Interface Handler is extended by adapters, and used in package api/grpc that implements the MeshServiceServer.

@@ -9,9 +9,9 @@ import (
 	"time"
 
 	backoff "github.com/cenkalti/backoff/v4"
-	"github.com/layer5io/meshkit/models/meshmodel/core/types"
-	"github.com/layer5io/meshkit/models/meshmodel/core/v1alpha1"
-	"github.com/layer5io/meshkit/models/meshmodel/registry"
+	"github.com/khulnasoft/meshkit/models/meshmodel/core/types"
+	"github.com/khulnasoft/meshkit/models/meshmodel/core/v1alpha1"
+	"github.com/khulnasoft/meshkit/models/meshmodel/registry"
 )
 
 // MeshModelRegistrantDefinitionPath - Structure for configuring registrant paths

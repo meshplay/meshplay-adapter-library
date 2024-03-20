@@ -17,7 +17,7 @@ package provider
 import (
 	"github.com/khulnasoft/meshplay-adapter-library/adapter"
 	"github.com/khulnasoft/meshplay-adapter-library/config"
-	"github.com/layer5io/meshkit/utils"
+	"github.com/khulnasoft/meshkit/utils"
 )
 
 // Type InMem implements the config interface Handler for an in-memory configuration registry.

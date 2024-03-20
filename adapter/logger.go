@@ -17,8 +17,8 @@ package adapter
 import (
 	"context"
 
+	"github.com/khulnasoft/meshkit/logger"
 	"github.com/khulnasoft/meshplay-adapter-library/meshes"
-	"github.com/layer5io/meshkit/logger"
 )
 
 type adapterLogger struct {

@@ -22,12 +22,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/khulnasoft/meshkit/utils"
+	meshplaykube "github.com/khulnasoft/meshkit/utils/kubernetes"
 	"github.com/khulnasoft/meshplay-adapter-library/meshes"
 	"github.com/khulnasoft/meshplay-adapter-library/status"
+	smp "github.com/khulnasoft/service-mesh-performance/spec"
 	"github.com/layer5io/learn-layer5/smi-conformance/conformance"
-	"github.com/layer5io/meshkit/utils"
-	mesherykube "github.com/layer5io/meshkit/utils/kubernetes"
-	smp "github.com/layer5io/service-mesh-performance/spec"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
@@ -72,7 +72,7 @@ type SMITestOptions struct {
 	// Namespace is the namespace where the SMI conformance
 	// must be installed
 	//
-	// Defaults to "meshery"
+	// Defaults to "meshplay"
 	Namespace string
 
 	// Manifest is the remote location of manifest
@@ -123,7 +123,7 @@ func (h *Adapter) RunSMITest(opts SMITestOptions) (Response, error) {
 		wg.Add(1)
 		go func(k8sconfig string) {
 			defer wg.Done()
-			kClient, err := mesherykube.New([]byte(k8sconfig))
+			kClient, err := meshplaykube.New([]byte(k8sconfig))
 			if err != nil {
 				errs = append(errs, err)
 				return
@@ -181,14 +181,14 @@ func mergeErrors(errs []error) error {
 }
 
 // installConformanceTool installs the smi conformance tool
-func (test *SMITest) installConformanceTool(smiManifest, ns string, kclient *mesherykube.Client) error {
+func (test *SMITest) installConformanceTool(smiManifest, ns string, kclient *meshplaykube.Client) error {
 	// Fetch the meanifest
 	manifest, err := utils.ReadRemoteFile(smiManifest)
 	if err != nil {
 		return err
 	}
 
-	if err := kclient.ApplyManifest([]byte(manifest), mesherykube.ApplyOptions{Namespace: ns}); err != nil {
+	if err := kclient.ApplyManifest([]byte(manifest), meshplaykube.ApplyOptions{Namespace: ns}); err != nil {
 		return err
 	}
 
@@ -198,7 +198,7 @@ func (test *SMITest) installConformanceTool(smiManifest, ns string, kclient *mes
 }
 
 // deleteConformanceTool deletes the smi conformance tool
-func (test *SMITest) deleteConformanceTool(smiManifest, ns string, kclient *mesherykube.Client) error {
+func (test *SMITest) deleteConformanceTool(smiManifest, ns string, kclient *meshplaykube.Client) error {
 	// Fetch the meanifest
 	manifest, err := utils.ReadRemoteFile(smiManifest)
 	if err != nil {
@@ -207,7 +207,7 @@ func (test *SMITest) deleteConformanceTool(smiManifest, ns string, kclient *mesh
 
 	if err := kclient.ApplyManifest(
 		[]byte(manifest),
-		mesherykube.ApplyOptions{Namespace: ns, Delete: true},
+		meshplaykube.ApplyOptions{Namespace: ns, Delete: true},
 	); err != nil {
 		return err
 	}
@@ -215,8 +215,8 @@ func (test *SMITest) deleteConformanceTool(smiManifest, ns string, kclient *mesh
 }
 
 // connectConformanceTool initiates the connection
-func (test *SMITest) connectConformanceTool(name, ns string, kclient *mesherykube.Client) error {
-	endpoint, err := mesherykube.GetServiceEndpoint(test.ctx, kclient.KubeClient, &mesherykube.ServiceOptions{
+func (test *SMITest) connectConformanceTool(name, ns string, kclient *meshplaykube.Client) error {
+	endpoint, err := meshplaykube.GetServiceEndpoint(test.ctx, kclient.KubeClient, &meshplaykube.ServiceOptions{
 		Name:         name,
 		Namespace:    ns,
 		PortSelector: "smi-conformance",
