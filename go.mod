@@ -11,7 +11,7 @@ require (
 	github.com/khulnasoft/service-mesh-performance v0.0.0-20240115121425-f0a0a76e1ed5
 	github.com/layer5io/learn-layer5/smi-conformance v0.0.0-20230822091643-2f56d2a3f80b
 	github.com/spf13/viper v1.17.0
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.45.0
+	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.46.0
 	golang.org/x/text v0.14.0
 	google.golang.org/grpc v1.60.1
 	google.golang.org/protobuf v1.33.0
