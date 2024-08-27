@@ -50,6 +50,7 @@ linters:
     - unused
     - cyclop
     - scopelint
+    - shadow
   exclude-rules:
     - testpackage
 
