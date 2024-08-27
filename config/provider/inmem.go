@@ -1,4 +1,4 @@
-// Copyright 2023 KhulnaSoft, Ltd.
+// Copyright 2020 KhulnaSoft, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@ package provider
 import (
 	"github.com/khulnasoft/meshplay-adapter-library/adapter"
 	"github.com/khulnasoft/meshplay-adapter-library/config"
-	"github.com/khulnasoft/meshkit/utils"
+	"github.com/layer5io/meshkit/utils"
 )
 
 // Type InMem implements the config interface Handler for an in-memory configuration registry.

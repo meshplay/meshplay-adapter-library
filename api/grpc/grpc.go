@@ -1,4 +1,4 @@
-// Copyright 2023 KhulnaSoft, Ltd.
+// Copyright 2020 KhulnaSoft, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,9 +26,9 @@ import (
 	"time"
 
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/recovery"
-	"github.com/khulnasoft/meshkit/utils/events"
 	"github.com/khulnasoft/meshplay-adapter-library/adapter"
 	"github.com/khulnasoft/meshplay-adapter-library/meshes"
+	"github.com/layer5io/meshkit/utils/events"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
