@@ -1,4 +1,4 @@
-// Copyright 2023 KhulnaSoft, Ltd.
+// Copyright 2020 KhulnaSoft, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ import (
 	"context"
 	"net/url"
 
-	"github.com/khulnasoft/meshkit/utils"
+	"github.com/layer5io/meshkit/utils"
 )
 
 var (

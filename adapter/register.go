@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/khulnasoft/meshkit/models/meshmodel/core/types"
+	"github.com/layer5io/meshkit/models/meshmodel/core/types"
 )
 
 var (

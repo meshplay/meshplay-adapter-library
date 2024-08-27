@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	meshmodel "github.com/khulnasoft/meshkit/models/meshmodel/core/v1alpha1"
-	"github.com/khulnasoft/meshkit/models/oam/core/v1alpha1"
-	"github.com/khulnasoft/meshkit/utils"
-	"github.com/khulnasoft/meshkit/utils/manifests"
+	meshmodel "github.com/layer5io/meshkit/models/meshmodel/core/v1alpha1"
+	"github.com/layer5io/meshkit/models/oam/core/v1alpha1"
+	"github.com/layer5io/meshkit/utils"
+	"github.com/layer5io/meshkit/utils/manifests"
 )
 
 var (
@@ -151,7 +151,7 @@ func copyCoreComponentsToNewVersion(fromDir string, toDir string, newVersion str
 	}
 	for _, f := range files {
 		//core definition file or core schema file
-		if !strings.Contains(strings.TrimSuffix(f.Name(), ".json"), ".") || !strings.Contains(strings.TrimSuffix(f.Name(), ".meshplay.layer5io.schema.json"), ".") {
+		if !strings.Contains(strings.TrimSuffix(f.Name(), ".json"), ".") || !strings.Contains(strings.TrimSuffix(f.Name(), ".meshplay.khulnasoft.schema.json"), ".") {
 			fsource, err := os.Open(filepath.Join(fromDir, f.Name()))
 			if err != nil {
 				return err

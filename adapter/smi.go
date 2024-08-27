@@ -1,4 +1,4 @@
-// Copyright 2023 KhulnaSoft, Ltd.
+// Copyright 2020 KhulnaSoft, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,12 +22,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/khulnasoft/meshkit/utils"
-	meshplaykube "github.com/khulnasoft/meshkit/utils/kubernetes"
+	"github.com/khulnasoft/learn-khulnasoft/smi-conformance/conformance"
 	"github.com/khulnasoft/meshplay-adapter-library/meshes"
 	"github.com/khulnasoft/meshplay-adapter-library/status"
+	"github.com/layer5io/meshkit/utils"
+	meshplaykube "github.com/layer5io/meshkit/utils/kubernetes"
 	smp "github.com/khulnasoft/service-mesh-performance/spec"
-	"github.com/layer5io/learn-layer5/smi-conformance/conformance"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
