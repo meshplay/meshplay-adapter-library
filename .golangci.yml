@@ -17,8 +17,8 @@ linters-settings:
       - nestParam
       - prealloc
   govet:
-    enabled: true
-    check-shadowing: true
+    enable:
+      - shadow
     tests: true
   gofmt:
     enabled: true
@@ -50,7 +50,6 @@ linters:
     - unused
     - cyclop
     - scopelint
-    - shadow
   exclude-rules:
     - testpackage
 
